@@ -1,0 +1,45 @@
+<app-header></app-header>
+<app-login></app-login>
+<app-parent-counter></app-parent-counter> 
+
+<div>
+    <ejs-chart  [legendSettings]='legendSettings' [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis'  [title]='samplename' [tooltip]='tooltip'>
+        <e-series-collection >
+        
+        <e-series [dataSource]='data'  type='Line' xName='month' yName='sales' name='Sales' [marker]='marker'></e-series>
+        
+        </e-series-collection>
+    </ejs-chart>
+</div>
+<div>
+    <ejs-chart  [legendSettings]='legendSettings' [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis'  [title]='samplename' [tooltip]='tooltip'>
+        <e-series-collection >
+        
+        <e-series [dataSource]='data1'  type='Bar' xName='month' yName='sales' name='Sales' [marker]='marker'></e-series>
+        
+        </e-series-collection>
+    </ejs-chart>
+</div>
+
+
+<div>
+    <ejs-accumulationchart [title]='chartTitle'>
+        <e-accumulation-series-collection>
+            <e-accumulation-series  type='Pie' [dataSource]='data2' xName='name' yName='value' [dataLabel]='chartLabel'></e-accumulation-series>
+        </e-accumulation-series-collection>
+    </ejs-accumulationchart>
+</div>
+<div>
+    <ejs-accumulationchart [title]='chartTitle'>
+        <e-accumulation-series-collection>
+            <e-accumulation-series  type='Funnel' [dataSource]='data3' xName='name' yName='value' [dataLabel]='chartLabel'></e-accumulation-series>
+        </e-accumulation-series-collection>
+    </ejs-accumulationchart>
+</div>
+<div>
+    <ejs-accumulationchart [title]='chartTitle'>
+        <e-accumulation-series-collection>
+            <e-accumulation-series  type='Pyramid' [dataSource]='data4' xName='name' yName='value' [dataLabel]='chartLabel'></e-accumulation-series>
+        </e-accumulation-series-collection>
+    </ejs-accumulationchart>
+</div>
